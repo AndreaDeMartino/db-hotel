@@ -20,7 +20,7 @@ Seleziona tutti gli ospiti che hanno più di 20 anni (al momento dell’esecuzio
 
 SELECT `name`,`lastname`,`date_of_birth`
 FROM ospiti
-WHERE `date_of_birth` < '2000';
+WHERE `date_of_birth` < '2000-05-26';
 
 
 /*
@@ -66,5 +66,5 @@ WHERE `document_type` = 'Driver License' and `date_of_birth` like '1975%';
 Quanti posti letto ha l’hotel in totale?
 */
 
-SELECT COUNT(`beds`) as 'Totale posti Letto'
+SELECT SUM(`beds`) as 'Totale posti Letto'
 from stanze
