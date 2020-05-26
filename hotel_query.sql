@@ -20,8 +20,7 @@ Seleziona tutti gli ospiti che hanno più di 20 anni (al momento dell’esecuzio
 
 SELECT `name`,`lastname`,`date_of_birth`
 FROM ospiti
-WHERE `date_of_birth` < '2000-05-26';
-
+WHERE `date_of_birth` < DATE_SUB(CURDATE(), INTERVAL 20 YEAR);
 
 /*
 Seleziona tutti gli ospiti il cui nome inizia con la D
