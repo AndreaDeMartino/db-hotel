@@ -59,7 +59,7 @@ Seleziona gli ospiti riconosciuti con patente e nati nel 1975
 
 SELECT `name`,`lastname`,`date_of_birth`,`document_type`
 FROM ospiti
-WHERE `document_type` = 'Driver License' and `date_of_birth` like '1975%';
+WHERE `document_type` = 'Driver License' and YEAR(date_of_birth) = "1975";
 
 
 /*
